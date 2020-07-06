@@ -2,10 +2,18 @@ require "getapp_import/version"
 require "getapp_import/vendor"
 require "getapp_import/source"
 require "getapp_import/importer"
+require "getapp_import/error"
 
 module GetappImport
+  # Class to start data importing process for a vendor
+  # 
   class Importer
     def initialize vendor_name=nil, data_source_uri=nil
+      raise Error::ParameterNotFoundError,
+        "vendor_name" if vendor_name.nil? || vendor_name.empty?
+      raise Error::ParameterNotFoundError,
+        "data_source_uri" if data_source_uri.nil? || data_source_uri.empty?
+
       @vendor_name = vendor_name
       @data_source_uri = data_source_uri
     end

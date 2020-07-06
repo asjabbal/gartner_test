@@ -33,5 +33,5 @@ importer.import # function to import data from filepath or url
 ```
 
 # Run Tests
-Go to main directory of the cloned gem and run tests with the following command:-\
+Go to gem directory *getapp_import* and run tests with the following command:-\
 `$ rake test`

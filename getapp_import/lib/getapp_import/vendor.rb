@@ -9,8 +9,8 @@ module GetappImport
         @name = name
         @data_source = data_source
     
-        raise Error::InvalidVendor, @name if !valid_vendor?
-        raise Error::InvalidVendorDataType,
+        raise Error::InvalidVendorError, @name if !valid_vendor?
+        raise Error::InvalidVendorDataTypeError,
           {vendor: @name, data_type: @data_source.data_type} if !valid_data_type_for_vendor?
       end
     

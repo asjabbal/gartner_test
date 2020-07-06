@@ -44,7 +44,7 @@ module GetappImport
                 nil
               end
 
-      raise Error::InvalidDataUri, @source if @uri.nil?
+      raise Error::InvalidDataUriError, @source if @uri.nil?
     end
   
     def set_data_type
