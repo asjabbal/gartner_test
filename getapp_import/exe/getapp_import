@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "getapp_import"
+
+importer = GetappImport::Importer.new(*ARGV)
+importer.import
