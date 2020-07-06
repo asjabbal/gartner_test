@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# This file contains app wide contants and can be used anywhere within the app
 module GetappImport
   VENDOR_CAPTERRA = "capterra"
   VENDOR_SOFTADV = "softwareadvice"

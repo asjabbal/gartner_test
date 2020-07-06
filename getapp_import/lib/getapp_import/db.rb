@@ -1,6 +1,8 @@
 require 'singleton'
 
 module GetappImport
+  # Class to make DB connections and execute queries. It's a singleton class - 
+  # only single instance will be created.
   class Db
     include Singleton
 

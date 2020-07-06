@@ -1,4 +1,5 @@
 module GetappImport
+  # Reader module contains different reader classes for different data types.
   module Reader
 
     class YamlReader

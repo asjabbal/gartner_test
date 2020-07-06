@@ -1,6 +1,10 @@
 require "getapp_import/constant"
 
 module GetappImport
+  # Super parser class
+  # params:-
+  #   +data+ (hash or array) : raw source data
+  #   +data_type+ (symbol) : based on this specific parser method gets called
   class Parser
     def initialize data=nil, data_type=nil
       @data = data
@@ -12,7 +16,10 @@ module GetappImport
     end
   end
 
+  # SdParser module contains source data parser classes for supported vendors.
   module SdParser
+
+    # Data parser class for Capterra vendor.
     class CapterraParser < GetappImport::Parser
       private
       def parse_yaml &block
@@ -32,6 +39,7 @@ module GetappImport
       end
     end
 
+    # Data parser class for Softwareadvice vendor.
     class SoftwareadviceParser < GetappImport::Parser
       private
       def parse_json &block
