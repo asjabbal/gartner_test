@@ -31,7 +31,3 @@ importer = GetappImport::Importer.new(
 )
 importer.import # function to import data from filepath or url
 ```
-
-# Run Tests
-Go to gem directory *getapp_import* and run tests with the following command:-\
-`$ rake test`

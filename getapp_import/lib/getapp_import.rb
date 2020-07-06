@@ -20,6 +20,7 @@ module GetappImport
     end
 
     # Method to start the data importing process
+    # It returns true if import goes fine otherwise will throw an error
     def import
       # create a new vendor
       vendor = Vendor::Vendor.new(
@@ -38,6 +39,8 @@ module GetappImport
       # import bulk parsed data
       # parsed_data = data_parser.parse
       # DataImporter.bulk_import(parsed_data)
+
+      true # flag which defines import was successful
     end
   end
 end
